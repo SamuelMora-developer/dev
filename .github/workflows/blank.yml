@@ -9,11 +9,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: Young_hustlers_club
 
       - name: Move files to root
         run: |
-          mv "./YH Club Website"/* .
-          rm -rf "./YH Club Website"
+          mv "YH Club Website"/* .
+          rm -rf "YH Club Website"
 
       - name: Commit changes
         run: |
