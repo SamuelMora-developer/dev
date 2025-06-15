@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: rgba(10, 25, 47, 0.8);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    border: 1px solid rgba(212, 180, 131, 0.3);
+    margin: 30px;
+}
+
+.header {
+    padding: 40px 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #f7f5ee;
+    text-shadow: 0 0 15px rgba(212, 180, 131, 0.5);
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #d4b483;
+    margin-bottom: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+    background: rgba(23, 42, 70, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Luxurious marble background */
+.logo-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(135deg, #2c3e50 0%, #4a6491 100%),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232a3b5a" opacity="0.3"/></svg>');
+    background-size: cover;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.brand-icon {
+    width: 120px;
+    height: 120px;
+    background: rgba(247, 245, 238, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    border: 2px solid rgba(212, 180, 131, 0.3);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(212, 180, 131, 0.2);
+}
+
+.moon-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.logo-content {
+    text-align: center;
+    padding: 30px;
+    background: rgba(10, 25, 47, 0.5);
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid rgba(212, 180, 131, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.brand-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f7f5ee;
+    margin-bottom: 20px;
+    position: relative;
+    text-shadow: 0 0 10px rgba(212, 180, 131, 0.3);
+}
+
+.slogan {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #d4b483;
+    text-transform: uppercase;
+}
+
+.glow-text {
+    background: linear-gradient(to right, #D4B483, #F0E6D2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 400;
+    position: relative;
+    text-shadow: 0 0 8px rgba(212, 180, 131, 0.5);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    background: rgba(16, 36, 64, 0.6);
+}
+
+.feature-card {
+    background: rgba(10, 25, 47, 0.5);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid rgba(212, 180, 131, 0.2);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(10, 25, 47, 0.7);
+    border-color: rgba(212, 180, 131, 0.4);
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: #d4b483;
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #f7f5ee;
+    margin-bottom: 15px;
+}
+
+.feature-desc {
+    color: #a0b3d6;
+    line-height: 1.6;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(10, 20, 35, 0.8);
+    color: #d4b483;
+    font-size: 16px;
+    border-top: 1px solid rgba(212, 180, 131, 0.2);
+}
+
+@media (max-width: 768px) {
+    .brand-logo {
+        font-size: 56px;
+    }
+    
+    .slogan {
+        font-size: 20px;
+    }
+    
+    .header {
+        padding: 30px 20px;
+    }
+    
+    .logo-container {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-logo {
+        font-size: 42px;
+    }
+    
+    .slogan {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    
+    .brand-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .moon-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+}
